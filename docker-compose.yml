@@ -15,9 +15,9 @@ services:
       volumes:
         - .:/application
       environment:
-        - POSTGRES_USER=postgre
-        - POSTGRES_PASSWORD=postgre
-        - POSTGRES_DB=postgre
+        - POSTGRES_USER=
+        - POSTGRES_PASSWORD=
+        - POSTGRES_DB=
 
     webserver:
       image: nginx:alpine
