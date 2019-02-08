@@ -1,0 +1,20 @@
+
+body {   
+    height: 100vh;
+    color: #616161;
+  }
+  i { font-size: 125%; }
+  .padding-5-percent { padding: 5%; }
+  .padding-3-percent { padding: 3%; }
+  .margin-top-3-percent { margin-top: 3%; }
+  .margin-top-2-percent { margin-top: 2%; }
+  .padding-2-percent { padding: 2%; }
+  .padding-ok { padding: 2% 0 2% 0;  }
+  .margin-bottom-3-percent { margin-bottom: 3%; }  
+  .width-90-percent { width: 50%; }
+  .button-icon { padding: 0; border: none; background: none; cursor: pointer; }
+  .button-icon:focus { outline: none; }
+  
+
+
+
