@@ -1,8 +1,8 @@
 Vamos preparar o ambiente?
 
-- Mudar credenciais para criação do banco no arquivo "docker-compose" e mudar credenciais na aplicação pelo arquivo ".env"
+- Mude as credenciais para a build do banco no arquivo "docker-compose" e mude as credenciais para acesso na aplicação pelo arquivo ".env"
 
-- executar o comando "docker-compose up" na raiz da pasta.
+- execute o comando "docker-compose up" na raiz da pasta.
 
 - Caso não haja permissão, aplicar na pasta conforme o sistema operacional.
 ex: chmod -R 755 developerTasks/
