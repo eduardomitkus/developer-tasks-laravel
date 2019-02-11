@@ -22,7 +22,7 @@ class TechnologyRepository
 
     public function all()
     {
-        return $this->eloquent->all();
+        return $this->eloquent->orderBy('name')->get();
     }
     
     public function find($id)
