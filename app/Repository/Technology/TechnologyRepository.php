@@ -9,9 +9,9 @@ class TechnologyRepository
     
     private $eloquent;
 
-    public function __construct(Technology $eloquent)
+    public function __construct()
     {        
-        $this->eloquent = $eloquent;
+        $this->eloquent = new Technology;
     }
 
     public function save($attributes)
@@ -41,7 +41,11 @@ class TechnologyRepository
     {
         $technology = $this->find($id);        
         return $technology->delete();
+    }
 
+    public function newInstance()
+    {
+        return new Technology;
     }
 
 }

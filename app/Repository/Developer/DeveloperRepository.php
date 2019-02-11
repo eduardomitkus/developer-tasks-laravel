@@ -10,9 +10,15 @@ class DeveloperRepository
 
     private $eloquent;
 
-    public function __construct(Developer $eloquent)
+    public function __construct()
     {
-        $this->eloquent = $eloquent;
+        $this->eloquent = new Developer;
+    }
+    
+    public function save($attributes)
+    {        
+        $this->eloquent->fill($attributes);
+        return $this->eloquent->save();
     }
 
     public function all()
@@ -31,6 +37,10 @@ class DeveloperRepository
         $eloquent->fill($attributes);
         return $eloquent->save();
     }
-    
+
+    public function newInstance()
+    {
+        return new Developer;
+    }
    
 }

@@ -8,14 +8,14 @@ class ListTaskRepository
 {
 
     private $eloquent;
-
-    public function __construct(ListTask $eloquent)
+    
+    public function __construct()
     {
-        $this->eloquent = $eloquent;
+        $this->eloquent = new ListTask;
     }
 
     public function save($attributes)
-    {
+    {        
         $this->eloquent->fill($attributes);
         return $this->eloquent->save();
     }

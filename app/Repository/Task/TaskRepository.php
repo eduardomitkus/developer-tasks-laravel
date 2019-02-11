@@ -10,9 +10,9 @@ class TaskRepository
 
     private $eloquent;
 
-    public function __construct(Task $eloquent)
+    public function __construct()
     {        
-        $this->eloquent = $eloquent;
+        $this->eloquent = new Task;
     }
 
     public function newInstance()

@@ -25,7 +25,7 @@ class TaskCreateAndEdit extends FormRequest
     {
         return [
             'title' => 'required|string|max:45',
-            'description' => 'required|string|max:100',
+            'description' => 'required|string|max:730',
             'priority' => 'in:"Baixa","Média","Alta"'
         ];
     }
