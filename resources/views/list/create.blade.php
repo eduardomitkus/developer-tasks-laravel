@@ -24,6 +24,7 @@ Nova Lista de Task
         <textarea name="description" type="text" class="form-control" rows="3">{{ old('description') }}</textarea>
     </div>
     <div class="form-group">
+            <label>Tecnologia</label>
         <select class="form-control" id="exampleFormControlSelect1" name="technology_id">
             @if($technologies->count() > 0)
             <option value="{{ null }}" selected>Selecione a tecnologia da lista</option>
@@ -31,7 +32,7 @@ Nova Lista de Task
             <option value="{{ $technology->getId() }}" {{ old('technology_id') == $technology->getName() ? 'selected' : ''  }}>{{ $technology->getName() }}</option>            
             @endforeach
             @else
-            <option value="{{ null }}" selected>Não há Tecnologias cadastradas</option>
+            <option value="{{ null }}" selected>É necessário inserir uma Tecnologia no sistema</option>
             @endif
         </select>
     </div>
