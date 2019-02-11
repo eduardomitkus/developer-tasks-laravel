@@ -70,6 +70,11 @@ class ListTask extends Model
     {
         return $this->belongsTo(Technology::class);
     }
+
+    public function hasTechnology()
+    {
+        return $this->technology()->get()->count() > 0;
+    }
     
 
 }

@@ -31,7 +31,7 @@ Nova Lista de Task
             <option value="{{ $technology->getId() }}" {{ old('technology_id') == $technology->getName() ? 'selected' : ''  }}>{{ $technology->getName() }}</option>            
             @endforeach
             @else
-            <option value="{{ 0 }}" selected>Não há tecnologias cadastradas no sistema</option> 
+            <option value="{{ null }}" selected>Não há Tecnologias cadastradas</option>
             @endif
         </select>
     </div>

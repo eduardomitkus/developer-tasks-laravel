@@ -15,11 +15,7 @@ class ListTaskRepository
     }
 
     public function save($attributes)
-    {
-        if($attributes['technology_id'] == 0){
-            $attributes['technology_id'] = null;
-        }
-        
+    {                
         $this->eloquent->fill($attributes);
         return $this->eloquent->save();
     }
