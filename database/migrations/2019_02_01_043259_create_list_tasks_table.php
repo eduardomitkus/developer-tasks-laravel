@@ -15,7 +15,7 @@ class CreateListTasksTable extends Migration
     {
         Schema::create('list_tasks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title',45);
+            $table->string('title',100);
             $table->string('description',100);
             $table->unsignedInteger('developer_id')->nullable();
             $table->foreign('developer_id')->references('id')->on('developers');

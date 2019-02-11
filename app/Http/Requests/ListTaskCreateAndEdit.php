@@ -25,7 +25,7 @@ class ListTaskCreateAndEdit extends FormRequest
     {
         return [
 
-            'title' => 'required|string|max:45',
+            'title' => 'required|string|max:100',
             'description' => 'required|string|max:100',
             'technology_id' => 'required'
             

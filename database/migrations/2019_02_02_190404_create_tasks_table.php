@@ -15,10 +15,10 @@ class CreateTasksTable extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title',45)->nullable();
-            $table->text('description',730)->nullable();
-            $table->enum('priority',['Baixa','Média','Alta'])->nullable();
-            $table->enum('stage',['Aguardando','Executando','Concluída'])->nullable();
+            $table->string('title',100);
+            $table->text('description',730);
+            $table->enum('priority',['Baixa','Média','Alta']);
+            $table->enum('stage',['Aguardando','Executando','Concluída']);
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
             $table->date('create_date')->nullable(); 
