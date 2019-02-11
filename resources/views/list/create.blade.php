@@ -25,10 +25,14 @@ Nova Lista de Task
     </div>
     <div class="form-group">
         <select class="form-control" id="exampleFormControlSelect1" name="technology_id">
+            @if($technologies->count() > 0)
             <option value="{{ null }}" selected>Selecione a tecnologia da lista</option>
             @foreach ($technologies as $technology)
             <option value="{{ $technology->getId() }}" {{ old('technology_id') == $technology->getName() ? 'selected' : ''  }}>{{ $technology->getName() }}</option>            
             @endforeach
+            @else
+            <option value="{{ 0 }}" selected>Não há tecnologias cadastradas no sistema</option> 
+            @endif
         </select>
     </div>
     <button type="submit" class="btn btn-info shadow">Salvar</button>

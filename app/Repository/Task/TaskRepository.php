@@ -65,8 +65,7 @@ class TaskRepository
 
         }
 
-        return $task;
-        
+        return $task;        
     }
 
     public function updateStage($id, $attributes)
@@ -86,19 +85,18 @@ class TaskRepository
 
     public function delete($id)
     {
-        $task = $this->eloquent->find($id);        
+        $task = $this->eloquent->find($id);
         $this->eloquent->deleteDetach($task);
         return $task->delete();
     }
 
     public function findByDeveloperLogged()
     {
-        $developerLogged = auth()->user()->getId();        
+        $developerLogged = auth()->user()->getId();
 
         return $this->newInstance()->whereHas('listTask.developer', function($query) use ($developerLogged){
             $query->whereId($developerLogged);
         })->orderBy('title');
-        
     }
     
     public function findByStage($stage)
