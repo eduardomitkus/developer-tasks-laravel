@@ -45,7 +45,8 @@ class ListTaskRepository
 
         return $this->eloquent->whereHas('developer', function($query) use ($developerLoged){
             return $query->whereId($developerLoged);
-        })->get();
+        })->orderBy('title')
+        ->get();
         
     }
 
