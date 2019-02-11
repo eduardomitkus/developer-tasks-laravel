@@ -27,8 +27,8 @@ class TaskRepository
 
     public function save($attributes)
     {        
-        $task = $this->setStages($this->eloquent,$attributes);        
-        $this->eloquent->fill($attributes->all());        
+        $task = $this->setStages($this->eloquent,$attributes);
+        $this->eloquent->fill($attributes->all());
         $this->eloquent->create_date = date('Y-m-d');
         return $this->eloquent->save();
     }

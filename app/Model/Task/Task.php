@@ -14,7 +14,7 @@ class Task extends Model
     protected $table = 'tasks';
 
     protected $fillable = [
-        'title', 'description', 'start_date', 'end_date', 'list_task_id', 'priority'
+        'title', 'description', 'create_date', 'start_date', 'end_date', 'list_task_id', 'priority'
     ];
 
     protected $dates = [

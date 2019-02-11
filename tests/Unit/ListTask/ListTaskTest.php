@@ -14,7 +14,7 @@ class ListTaskTest extends TestCase
 
     private $listTaskRepository;
 
-    private function getIdUser()
+    private function getUser()
     {
         $developer = factory(Developer::class)->make();
         $developer->save();
@@ -38,7 +38,7 @@ class ListTaskTest extends TestCase
 
     public function testCreate()
     {                        
-        $developer = $this->getIdUser();
+        $developer = $this->getUser();
         $technology = $this->getTechnology();
 
         $listTask = factory(ListTask::class)->make();
@@ -51,9 +51,9 @@ class ListTaskTest extends TestCase
         $this->assertTrue($isSalved);
     }
 
-    public function testSelectACreatedTask()
+    public function testSelectACreatedListTask()
     {        
-        $developer = $this->getIdUser();
+        $developer = $this->getUser();
         $technology = $this->getTechnology();
 
         $listTask = factory(ListTask::class)->make();
@@ -72,7 +72,7 @@ class ListTaskTest extends TestCase
 
     public function testUpdate()
     {
-        $developer = $this->getIdUser();
+        $developer = $this->getUser();
         $technology = $this->getTechnology();
 
         $listTask = factory(ListTask::class)->make();
@@ -103,7 +103,7 @@ class ListTaskTest extends TestCase
 
     public function testDelete()
     {
-        $developer = $this->getIdUser();
+        $developer = $this->getUser();
         $technology = $this->getTechnology();
 
         $listTask = factory(ListTask::class)->make();
@@ -115,7 +115,6 @@ class ListTaskTest extends TestCase
         $isDeleted = $this->listTaskRepository->delete($listTask->getId(), $listTask->toArray());
 
         $this->assertTrue($isDeleted);
-
     }
     
 }
