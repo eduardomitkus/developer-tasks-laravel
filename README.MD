@@ -7,6 +7,8 @@ Vamos preparar o ambiente?
 - Caso não haja permissão, aplicar na pasta conforme o sistema operacional.
 ex: chmod -R 755 developerTasks/
 
+- Por padrão, a aplicação será levantada na porta 8080.
+
 - Caso não consiga executar comandos no volume, acesssar bash do container.  ex: docker exec -i -t {ID} /bin/bash
 
 - Migração: "php artisan migrate" para rodar as migrações;
