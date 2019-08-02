@@ -27,3 +27,5 @@ VERSÕES DAS TECNOLOGIAS UTILIZADAS:
 - Docker 18.06.1
 
 - PHPUnit 7.5
+
+**Necessário rodar o "composer install" localmente pois não está na imagem docker.
